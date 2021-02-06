@@ -1,3 +1,6 @@
 tint2 &
 compton &
 nitrogen --restore &
+setxkbmap -layout us,fr,ar -option grp:ctrls_toggle
+synclient HorizTwoFingerScroll=1
+
