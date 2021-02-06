@@ -254,7 +254,100 @@
     <keybind key="A-S-c">
       <action name="Close"/>
     </keybind>
-    <!-- tiling keybinding -->
+    <!-- ################ tiling half window keybinding ################ -->
+    <!-- left -->
+    <keybind key="A-h">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+
+    <!-- right -->
+    <keybind key="A-l">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+
+
+    <!-- top -->
+    <keybind key="A-k">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+
+    <!-- bottom -->
+    <keybind key="A-j">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <!-- ################ end tiling half window ################ --> 
+
+    <!-- ################ tiling to corners ################ --> 
+    <!-- top left -->
+    <keybind key="A-y">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+
+    <!-- top right -->
+    <keybind key="A-o">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+
+    <!-- bottom right -->
+    <keybind key="A-period">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+
+    <!-- bottom left -->
+    <keybind key="A-b">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <!-- ################ end tiling to corners ################ -->
+
+
     <keybind key="A-m"> 
     <action name="ToggleMaximize"/>
   </keybind>
