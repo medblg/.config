@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=show desktop
+Exec=xdotool key super+d
+Terminal=false
+Type=Application
