@@ -203,13 +203,13 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="A-S-2">
+    <keybind key="A-S-1">
       <action name="SendToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="A-S-1">
+    <keybind key="A-S-2">
       <action name="SendToDesktop">
         <to>right</to>
         <wrap>no</wrap>
@@ -572,16 +572,17 @@
           <to>next</to>
         </action>
       </mousebind>
-      <mousebind button="A-S-Up" action="Click">
+        <!--
+      <mousebind button="A-S-2" action="Click">
         <action name="SendToDesktop">
           <to>previous</to>
         </action>
       </mousebind>
-      <mousebind button="A-S-Down" action="Click">
+      <mousebind button="A-S-1" action="Click">
         <action name="SendToDesktop">
           <to>next</to>
         </action>
-      </mousebind>
+      </mousebind> -->
     </context>
     <context name="Titlebar">
       <mousebind button="Left" action="Drag">
@@ -855,7 +856,8 @@
        just don't make menu ids clash or, well, it'll be kind of pointless -->
     <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
     <!-- system menu files on Debian systems -->
-    <file>/var/lib/openbox/debian-menu.xml</file>
+      <!-- <file>/var/lib/openbox/debian-menu.xml</file> -->
+      <file>~/.config/openbox/menu.xml</file>
     <file>menu.xml</file>
     <hideDelay>200</hideDelay>
     <!-- if a press-release lasts longer than this setting (in milliseconds), the
