@@ -310,6 +310,16 @@
     </action>
   </keybind>
 
+    <keybind key="A-S-g">        # 50% width, height
+    <action name="Unmaximize"/>
+    <action name="MoveResizeTo">
+      <x>center</x>
+      <y>center</y>
+      <width>50%</width>
+      <height>100%</height>
+    </action>
+  </keybind>
+
     <!-- ################ end tiling half window ################ --> 
 
     <!-- ################ tiling to corners ################ --> 
@@ -430,15 +440,43 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="W-e">
+    <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>thunar</name>
-        </startupnotify>
-        <command>thunar</command>
+        <command>amixer set "Master" 5%-</command>
       </action>
     </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>amixer set "Master" 5%+</command>
+      </action>
+ </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>pactl set-sink-mute 0 toggle</command>
+      </action>
+ </keybind>
+    <keybind key="XF86AudioMicMute">
+      <action name="Execute">
+        <command>amixer set "Capture" toggle</command>
+      </action>
+ </keybind>
+
+ <keybind key="W-e">
+   <action name="Execute">
+       <name>thunar</name>
+     <command>thunar</command>
+   </action>
+ </keybind>
+ <keybind key="W-v">
+   <action name="Execute">
+     <command>gvim</command>
+   </action>
+ </keybind>
+ <keybind key="W-m">
+   <action name="Execute">
+     <command>mousepad</command>
+   </action>
+ </keybind>
     <!-- custom keybinding for programs I often invoke -->
     <keybind key="A-S-Return">
       <action name="Execute">
