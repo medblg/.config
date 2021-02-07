@@ -299,6 +299,17 @@
         <height>50%</height>
       </action>
     </keybind>
+    <!-- center win -->
+    <keybind key="A-g">        # 50% width, height
+    <action name="Unmaximize"/>
+    <action name="MoveResizeTo">
+      <x>center</x>
+      <y>center</y>
+      <width>50%</width>
+      <height>50%</height>
+    </action>
+  </keybind>
+
     <!-- ################ end tiling half window ################ --> 
 
     <!-- ################ tiling to corners ################ --> 
@@ -432,6 +443,12 @@
     <keybind key="A-S-Return">
       <action name="Execute">
         <command>xfce4-terminal</command>
+      </action>
+    </keybind>
+    <!-- make window in top -->
+    <keybind key="A-S-a">
+      <action name="Execute">
+        <command>wmctrl -r :ACTIVE: -b toggle,above</command>
       </action>
     </keybind>
     <keybind key="A-p">
