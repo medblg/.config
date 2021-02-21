@@ -2,9 +2,9 @@
 <JWM>
 
     <!-- The root menu. -->
-    <RootMenu onroot="12">
+    <RootMenu onroot="123" label="s1m0x"><!-- 3 right mouse button -->
         <Include>/etc/jwm/debian-menu</Include>
-        <Program icon="terminal.png" label="Terminal">xterm</Program>
+        <Program icon="terminal.png" label="Terminal">xfce4-terminal</Program>
         <Separator/>
         <Program icon="lock.png" label="Lock">
             xlock -mode blank
@@ -33,7 +33,7 @@
         <Option>notitle</Option>
     </Group>
 
-    <!-- Tray at the bottom. -->
+    <!-- Tray at the bottom.  modified to top, y=1 instead of y=-1 -->
     <Tray x="0" y="1" height="25" autohide="off">
 
         <TrayButton icon="/usr/share/jwm/jwm-red.svg">root:1</TrayButton>
@@ -114,49 +114,6 @@
          IconPath can be listed multiple times to allow searching
          for icons in multiple paths.
       -->
-    <IconPath>/usr/share/icons/gnome/256x256/actions</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/apps</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/categories</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/devices</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/emblems</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/places</IconPath>
-    <IconPath>/usr/share/icons/gnome/256x256/status</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/actions</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/animations</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/apps</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/categories</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/devices</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/emblems</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/places</IconPath>
-    <IconPath>/usr/share/icons/gnome/32x32/status</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/actions</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/apps</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/categories</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/devices</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/emblems</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/places</IconPath>
-    <IconPath>/usr/share/icons/gnome/scalable/status</IconPath>
-    <IconPath>/usr/share/icons/hicolor/256x256/apps</IconPath>
-    <IconPath>/usr/share/icons/hicolor/256x256/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/actions</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/apps</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/categories</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/devices</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/emblems</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/hicolor/32x32/status</IconPath>
-    <IconPath>/usr/share/icons/hicolor/512x512/apps</IconPath>
-    <IconPath>/usr/share/icons/hicolor/512x512/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/hicolor/scalable/actions</IconPath>
-    <IconPath>/usr/share/icons/hicolor/scalable/apps</IconPath>
-    <IconPath>/usr/share/icons/hicolor/scalable/categories</IconPath>
-    <IconPath>/usr/share/icons/hicolor/scalable/devices</IconPath>
-    <IconPath>/usr/share/icons/hicolor/scalable/emblems</IconPath>
-    <IconPath>/usr/share/icons/hicolor/scalable/mimetypes</IconPath>
-    <IconPath>/usr/share/icons/hicolor/scalable/places</IconPath>
     <IconPath>/usr/share/icons/hicolor/scalable/status</IconPath>
     <IconPath>/usr/share/icons</IconPath>
     <IconPath>/usr/share/pixmaps</IconPath>
@@ -181,7 +138,7 @@
     <DoubleClickDelta>2</DoubleClickDelta>
 
     <!-- The focus model (sloppy or click) -->
-    <FocusModel>sloppy</FocusModel>
+    <FocusModel>click</FocusModel>
 
     <!-- The snap mode (none, screen, or border) -->
     <SnapMode distance="10">border</SnapMode>
@@ -204,19 +161,27 @@
     <Key key="Return">select</Key>
     <Key key="Escape">escape</Key>
 
+
+    <!-- window manager customize as my dwm keybinding -->
     <Key mask="A" key="Tab">nextstacked</Key>
-    <Key mask="A" key="F4">close</Key>
+    <Key mask="As" key="c">close</Key>
     <Key mask="A" key="#">desktop#</Key>
-    <Key mask="A" key="F1">root:1</Key>
+    <Key mask="As" key="2">sendr</Key>
+    <Key mask="As" key="1">sendl</Key>
+    <Key mask="A" key="space">root:1</Key>
     <Key mask="A" key="F2">window</Key>
-    <Key mask="A" key="F10">maximize</Key>
+    <Key mask="A" key="m">maximize</Key>
     <Key mask="A" key="Right">rdesktop</Key>
     <Key mask="A" key="Left">ldesktop</Key>
     <Key mask="A" key="Up">udesktop</Key>
     <Key mask="A" key="Down">ddesktop</Key>
+    <Key mask="AsC" key="q">exec:jwm -restart</Key>
 
+        <!-- my programs -->
     <Key mask="A" key="p">exec:dmenu_run -b</Key>
     <Key mask="4" key="c">exec:chromium-browser</Key>
-    <Key mask="S" key="t">exec:xfce4-terminal</Key>
+    <Key mask="4" key="t">exec:thunar</Key>
+    <Key mask="4" key="m">exec:mousepad</Key>
+    <Key mask="As" key="Return">exec:xfce4-terminal</Key>
 
 </JWM>
