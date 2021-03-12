@@ -1,0 +1,25 @@
+[global_config]
+  dbus = False
+  borderless = True
+  extra_styling = False
+[keybindings]
+  split_horiz = <Super>h
+  split_vert = <Super>v
+[profiles]
+  [[default]]
+    icon_bell = False
+    background_darkness = 0.38
+    cursor_color = "#aaaaaa"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
