@@ -1,6 +1,9 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
+# move mouse when focus
+yabai -m config mouse_follows_focus on
+
 #layouts: bsp, stack or float
 yabai -m config layout bsp
 
